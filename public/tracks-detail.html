@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Music Track</title>
+    <meta name="description" content="Music Track Description" id="pageDescription">
+    <link rel="icon" href="/images/logo.png" type="image/png" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- boostrap -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- font awesome -->
+    <!-- <link rel="stylesheet" href="icons/all.min.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- animation css -->
+    <link rel="stylesheet" href="/animation/aos.css" />
+</head>
+<body>
+
+    
+    <!-- notification section -->
+    <section class="notification">
+        <div
+          id="carouselExampleSlidesOnly"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <h4
+                class="d-block w-100"
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
+                <i class="fa-solid fa-music pe-1"></i>
+                Independent Music Artist
+                <i class="fa-solid fa-icons ps-1"></i>
+              </h4>
+            </div>
+            <div class="carousel-item">
+              <h4 class="d-block w-100">
+                <i class="fa-solid fa-location-dot pe-1"></i>
+                Born on Srivilliputtur
+              </h4>
+            </div>
+            <div class="carousel-item">
+              <h4 class="d-block w-100">
+                <i class="fa-brands fa-youtube pe-1"></i>
+                Youtuber
+              </h4>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- navication -->
+      <header data-aos="fade-down">
+        <nav class="navbar navbar-expand-lg navbar-light ms-5 me-5 mt-4">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><img
+                src="/images/logo.png"
+                class="img"
+                alt="MS Dharani Logo"
+                width="40px"
+                height="40px"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/tracks">Tracks</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/own-tracks">Own Tracks</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact" tabindex="-1" aria-disabled="true"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+              <a class="navbar-brand desktop-only" href="#"
+                ><img
+                  src="/images/design.gif"
+                  alt="Sound On"
+                  height="40px"
+                  width="180px"
+              /></a>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <div class="dt-bg">
+        <div id="track" class="container td-container"></div>
+    </div>
+    <footer>
+        <div class="social-link">
+          <a href="https://www.instagram.com/msdharani1" target="_blank"
+            ><i class="fa-brands fa-square-instagram"></i
+          ></a>
+          <a href="https://www.youtube.com/@MSDharaniOfficial" target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="https://twitter.com/MSDharani007" target="_blank"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a
+            href="https://open.spotify.com/artist/4NLJZVbLWCODiAlS5pcQyG?autoplay=true"
+            target="_blank"
+            ><i class="fa-brands fa-spotify"></i
+          ></a>
+        </div>
+        <div class="navication-link">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/tracks">Tracks</a></li>
+            <li><a href="/own-tracks">Own Tracks</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="copyrights">
+          <p>Developed by MS Dharani &copy; 2024</p>
+        </div>
+      </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCdwwxaeDkUd-cH0GXMg1ndDEll_y6HiKo",
+            authDomain: "aristmsdharani.firebaseapp.com",
+            projectId: "aristmsdharani",
+            storageBucket: "aristmsdharani.appspot.com",
+            messagingSenderId: "349890565745",
+            appId: "1:349890565745:web:05d4e173e09d58a26a2dd0",
+            measurementId: "G-4H9SPRV6V4"
+        };
+        firebase.initializeApp(firebaseConfig);
+        
+        const database = firebase.database();
+
+        // Retrieve the URL path dynamically
+        const currentUrl = window.location.pathname;
+        const trackUrl = currentUrl.slice(1); // Remove leading slash
+
+        // Retrieve data for the current track URL
+        const trackRef = database.ref('new-music').orderByChild('url').equalTo(trackUrl);
+
+        trackRef.once('value', (snapshot) => {
+            const trackData = snapshot.val();
+            const trackDiv = document.getElementById('track');
+            if (trackData) {
+                const track = Object.values(trackData)[0]; // Assuming there is only one track with the specified URL
+                document.getElementById('pageTitle').innerText = track.pagetitle;
+                document.getElementById('pageDescription').content = track.pageDes;
+                trackDiv.innerHTML = `
+                    <div class='td-left'>
+                        <img src="${track.coverImg}" alt="$songTitle}">
+                    </div>
+                    <div class='td-right'>
+                        <h4>Title : ${track.songTitle}</h4>
+                        <h2>Arist : ${track.artist}</h2>
+                        <p>${track.songDes}</p>
+                        <p class="pt-3 mb-4">Listen Now!</p>
+                        <div class="pltform">
+                            <a href="${track.spotifyUrl}" class="sp-bg"><i class="fa-brands fa-spotify"></i> Spotify</a>
+                            <a href="${track.spotifyUrl}" class="yt-bg"><i class="fa-brands fa-youtube"></i> Youtube</a> 
+                        </div>
+                    </div>
+                `;
+            } else {
+                trackDiv.innerHTML = `<p>No track found with the specified URL.</p>`;
+            }
+        });
+    </script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <!-- animation js -->
+    <script src="/animation/aos.js"></script>
+    <script src="/animation/main.js"></script>
+</body>
+</html>

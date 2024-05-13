@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MS Dharani</title>
+    <link rel="icon" href="/images/logo.png" type="image/png" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- boostrap -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- font awesome -->
+    <!-- <link rel="stylesheet" href="icons/all.min.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- animation css -->
+    <link rel="stylesheet" href="/animation/aos.css" />
+  </head>
+  <body>
+
+    <!-- <div class="loading-screen" id="loading-screen">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div> -->
+
+<!-- <div id="content" style="display: none;"> -->
+
+    <!-- notification section -->
+    <section class="notification">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h4
+              class="d-block w-100"
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
+              <i class="fa-solid fa-music pe-1"></i>
+              Independent Music Artist
+              <i class="fa-solid fa-icons ps-1"></i>
+            </h4>
+          </div>
+          <div class="carousel-item">
+            <h4 class="d-block w-100">
+              <i class="fa-solid fa-location-dot pe-1"></i>
+              Born on Srivilliputtur
+            </h4>
+          </div>
+          <div class="carousel-item">
+            <h4 class="d-block w-100">
+              <i class="fa-brands fa-youtube pe-1"></i>
+              Youtuber
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- navication -->
+    <header data-aos="fade-down">
+      <nav class="navbar navbar-expand-lg navbar-light ms-5 me-5 mt-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="/images/logo.png"
+              class="img"
+              alt="MS Dharani Logo"
+              width="40px"
+              height="40px"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/tracks">Tracks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/own-tracks">Own Tracks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact" tabindex="-1" aria-disabled="true"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <a class="navbar-brand desktop-only" href="#"
+              ><img
+                src="/images/design.gif"
+                alt="Sound On"
+                height="40px"
+                width="180px"
+            /></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- hero section -->
+    <!-- main section -->
+    <section class="hero-main">
+      <div class="left">
+        <img
+          src="/images/MS Dharani.png"
+          alt="MS Dharani"
+          data-aos="fade-right"
+        />
+      </div>
+      <div class="right pt-5">
+        <h1 data-aos="fade-up" data-aos-duration="1000">
+          Independent Music Artist
+        </h1>
+        <p class="mt-4" data-aos="fade-up" data-aos-duration="1000">
+          MS Dharani is a talented individual who excels in both music and
+          programming, showcasing the power of pursuing one's passions with
+          dedication and creativity.
+        </p>
+        <div class="btn-hero">
+          <button
+            type="button"
+            class="btn btn-outline-dark me-3"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            onclick="navigateToPage1('/about')"
+          >
+            About
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-dark"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            onclick="navigateToPage1('/contact')"
+          >
+            Contact
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- scroll text -->
+    <section class="scroll-text">
+      <marquee behavior="" direction="" loop="" scrollamount="2">
+        <div class="scroll-content">
+          <p><i class="fa-solid fa-music pe-2"></i>Cover Songs</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Own Songs</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Tamil Songs</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Instrumental Covers</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Flute Covers</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Piano Covers</p>
+          <!-- loop1 -->
+          <p><i class="fa-solid fa-music pe-2"></i>Cover Songs</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Own Songs</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Tamil Songs</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Instrumental Covers</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Flute Covers</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Piano Covers</p>
+          <!-- loop3 -->
+          <p><i class="fa-solid fa-music pe-2"></i>Cover Songs</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Own Songs</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Tamil Songs</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Instrumental Covers</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Flute Covers</p>
+          <p><i class="fa-solid fa-music pe-2"></i>Piano Covers</p>
+        </div>
+      </marquee>
+    </section>
+
+    <!-- latest tracks -->
+
+    <section class="latest-tracks">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1
+              class="mt-5 text-center text-white h-text"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Latest Tracks
+            </h1>
+            <p
+              class="text-center text-white p-text mb-5 px-5"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              MS Dharani has just dropped some fresh tracks for your listening
+              pleasure! Check out the latest tunes uploaded by MS Dharani now.
+            </p>
+          </div>
+        </div>
+        <div class="row tracks">
+          <div
+            class="col-lg-3 col-sm-6 col-md-6 b-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="card" style="width: 18rem">
+              <img
+                src="/images/Pirai Thedum Iravile - Instrumental Version.png"
+                class="card-img-top"
+                alt="Pirai Thedum Iravile - Instrumental Version"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Pirai Thedum Iravile - Instrumental Version
+                </h5>
+                <p class="card-text">By MS Dharani</p>
+                <div class="btn-hero">
+                  <button
+                    type="button"
+                    class="btn btn-outline-dark me-3"
+                    style="width: 100%"
+                    onclick="navigateToPage('https://open.spotify.com/track/7xGFBASFCyL6sVtSfHUcPf?si=ba6c69cba6e64803')"
+                  >
+                    Listen Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-sm-6 col-md-6 b-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="card" style="width: 18rem">
+              <img
+                src="/images/Urugi Urugi Cover Photo.jpg"
+                class="card-img-top"
+                alt="Urugi Urugi Instrumental Version"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Urugi Urugi Instrumental Version</h5>
+                <p class="card-text">By MS Dharani</p>
+                <div class="btn-hero">
+                  <button
+                    type="button"
+                    class="btn btn-outline-dark me-3"
+                    style="width: 100%"
+                    onclick="navigateToPage('https://open.spotify.com/track/5VS90a2dXxdskRqhG9nIle?si=cfb04bde20b849c8')"
+                  >
+                    Listen Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-sm-6 col-md-6 b-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="card" style="width: 18rem">
+              <img
+                src="/images/Remo Happy Birthday BGM.jpg"
+                class="card-img-top"
+                alt="Remo Happy Birthday BGM"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Remo Happy Birthday BGM - Instrumental Version
+                </h5>
+                <p class="card-text">By MS Dharani</p>
+                <div class="btn-hero">
+                  <button
+                    type="button"
+                    class="btn btn-outline-dark me-3"
+                    style="width: 100%"
+                    onclick="navigateToPage('https://open.spotify.com/track/0m3U41BvnyZ7jeX1XCAxh9?si=f32857f6cf604112')"
+                  >
+                    Listen Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-sm-6 col-md-6 b-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="card" style="width: 18rem">
+              <img
+                src="/images/nee partha vizhigal by ms dharani.jpg"
+                class="card-img-top"
+                alt="Nee Paartha Vizhigal - Instrumental Version"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Nee Paartha Vizhigal - Instrumental Version
+                </h5>
+                <p class="card-text">By MS Dharani</p>
+                <div class="btn-hero">
+                  <button
+                    type="button"
+                    class="btn btn-outline-dark me-3"
+                    style="width: 100%"
+                    onclick="navigateToPage('https://open.spotify.com/track/2mzEbdVKME9wvNrQQSfUJV?si=784a2d1435f94858')"
+                  >
+                    Listen Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-hero t-btn">
+          <button
+            type="button"
+            class="btn btn-outline-dark me-3"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            onclick="navigateToPage1('/tracks')"
+          >
+            More Tracks...
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- about us -->
+    <section class="about">
+      <div class="left-about">
+        <img
+          src="/images/about_img.jpg"
+          alt="MS Dharani"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        />
+      </div>
+      <div class="right-about">
+        <h1 class="a-head" data-aos="fade-up" data-aos-duration="1000">
+          About
+        </h1>
+        <p class="a-para" data-aos="fade-up" data-aos-duration="1000">
+          MS Dharani is a self-taught keyboardist and an independent artist who
+          initiated his musical journey on his YouTube channel, "MS Dharani,"
+          from a very early age. His distinctive, captivating mashups have
+          gained attention. He's now gearing up to release his own original
+          compositions, so keep an eye out for that and follow his recent
+          updates on Instagram at @msdharani1.
+        </p>
+        <div class="btn-hero a-btn">
+          <button
+            type="button"
+            class="btn btn-outline-dark me-3"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            onclick="navigateToPage1('/about')"
+          >
+            Read More <i class="fa-solid fa-arrow-right ps-2"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="platform">
+      <h1
+        class="mt-5 text-center pt-text"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        Available On
+      </h1>
+      <div class="container1">
+        <marquee behavior="" direction="" scrollamount="2">
+          <div
+            class="image-container"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0"
+          >
+            <img src="/images/spotify.png" alt="Spotify" />
+            <img src="/images/apple-music.png" alt="Apple Music" />
+            <img src="/images/yt-music.png" alt="Youtube Music" />
+            <img src="/images/insta.png" alt="Instagram Music" />
+            <img src="/images/fb.png" alt="Facebook Music" />
+            <img src="/images/soundcloud.png" alt="Soundcloud Music" />
+            <!-- loop1 -->
+            <img src="/images/spotify.png" alt="Spotify" />
+            <img src="/images/apple-music.png" alt="Apple Music" />
+            <img src="/images/yt-music.png" alt="Youtube Music" />
+            <img src="/images/insta.png" alt="Instagram Music" />
+            <img src="/images/fb.png" alt="Facebook Music" />
+            <img src="/images/soundcloud.png" alt="Soundcloud Music" />
+            <!-- loop2 -->
+            <img src="/images/spotify.png" alt="Spotify" />
+            <img src="/images/apple-music.png" alt="Apple Music" />
+            <img src="/images/yt-music.png" alt="Youtube Music" />
+            <img src="/images/insta.png" alt="Instagram Music" />
+            <img src="/images/fb.png" alt="Facebook Music" />
+            <img src="/images/soundcloud.png" alt="Soundcloud Music" />
+          </div>
+        </marquee>
+      </div>
+    </section>
+
+    <footer>
+      <div class="social-link">
+        <a href="https://www.instagram.com/msdharani1" target="_blank"
+          ><i class="fa-brands fa-square-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com/@MSDharaniOfficial" target="_blank"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a href="https://twitter.com/MSDharani007" target="_blank"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a
+          href="https://open.spotify.com/artist/4NLJZVbLWCODiAlS5pcQyG?autoplay=true"
+          target="_blank"
+          ><i class="fa-brands fa-spotify"></i
+        ></a>
+      </div>
+      <div class="navication-link">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/tracks">Tracks</a></li>
+          <li><a href="/own-tracks">Own Tracks</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="copyrights">
+        <p>Developed by MS Dharani &copy; 2024</p>
+      </div>
+    </footer>
+<!-- </div> -->
+
+    <!-- <audio id="myAudio">
+      </audio> -->
+
+    <!-- custom js -->
+    <script src="/js/script.js"></script>
+    <!-- boostrap js -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <!-- animation js -->
+    <script src="/animation/aos.js"></script>
+    <script src="/animation/main.js"></script>
+  </body>
+</html>

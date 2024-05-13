@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Tracks Data - MS Dharani</title>
+    <link rel="icon" href="../images/logo.png" type="image/png" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #007bff;
+            padding: 50px 0 50px 0px;
+        }
+
+        form {
+            width: 500px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: grid;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        textarea{
+            width: calc(100% - 10px);
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form id="musicForm">
+        <label for="pageTitle">Page Title:</label>
+        <input type="text" id="pageTitle" name="pageTitle" required>
+
+        <label for="pageDes">Page Description:</label>
+        <textarea name="pageDes" id="pageDes"></textarea>
+
+        <label for="title">Song Title:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="songDes">Song Description:</label>
+        <input type="text" id="songDes" name="songDes" required>
+
+        <label for="artist">Artist:</label>
+        <input type="text" id="artist" name="artist" required>
+
+        <label for="coverImg">Choose Cover Images:</label><br><br>
+        <input type="file" id="coverImg" name="coverImg" required><br><br>
+
+        <label for="url">Url:</label>
+        <input type="text" id="url" name="url" required>
+
+        <label for="iframeSrc">Iframe Source:</label>
+        <input type="text" id="iframeSrc" name="iframeSrc" required>
+        <br>
+        <label for="databaseOption">Database:</label>
+        <select id="databaseOption">
+            <option value="new-music">Tracks</option>
+            <option value="new-own-music">Own Tracks</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Add Music">
+    </form>
+
+    <!-- Firebase JavaScript SDK (version 8) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+    <script>
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCdwwxaeDkUd-cH0GXMg1ndDEll_y6HiKo",
+            authDomain: "aristmsdharani.firebaseapp.com",
+            projectId: "aristmsdharani",
+            storageBucket: "aristmsdharani.appspot.com",
+            messagingSenderId: "349890565745",
+            appId: "1:349890565745:web:05d4e173e09d58a26a2dd0",
+            measurementId: "G-4H9SPRV6V4"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+        const storage = firebase.storage();
+
+        // Form submit event listener
+        const musicForm = document.getElementById('musicForm');
+        musicForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Get input values
+            const pagetitle = document.getElementById('pageTitle').value;
+            const pageDes = document.getElementById('pageDes').value;
+            const songTitle = document.getElementById('title').value;
+            const songDes = document.getElementById('songDes').value;
+            const artist = document.getElementById('artist').value;
+            const coverImgInput = document.getElementById('coverImg');
+            const url = document.getElementById('url').value;
+            const iframeSrc = document.getElementById('iframeSrc').value;
+            const databaseOption = document.getElementById('databaseOption').value;
+
+            // Upload cover image to Firebase Storage
+            const coverImgFile = coverImgInput.files[0];
+            const storageRef = storage.ref();
+            const coverImgRef = storageRef.child('cover_images/' + coverImgFile.name);
+
+            coverImgRef.put(coverImgFile)
+              .then((snapshot) => snapshot.ref.getDownloadURL())
+              .then((downloadURL) => {
+                // Push data to Firebase Realtime Database
+                const musicRef = database.ref(databaseOption);
+                const musicData = {
+                  pagetitle,
+                  pageDes,
+                  songTitle,
+                  songDes,
+                  artist,
+                  coverImg: downloadURL,
+                  url,
+                  iframeSrc
+                };
+
+                return musicRef.push(musicData);
+              })
+              .then(() => {
+                console.log('Data added successfully');
+                alert("Track details inserted successfully");
+                // Clear form fields
+                musicForm.reset();
+              })
+              .catch((error) => {
+                alert("Error");
+                console.error('Error adding data:', error);
+              });
+        });
+    </script>
+</body>
+</html>
